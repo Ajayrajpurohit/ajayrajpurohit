@@ -1,0 +1,49 @@
+import { ArticleLayout } from '@/components/ArticleLayout'
+
+export const dynamic = 'force-static'
+
+export const article = {
+  author: 'Adam Wathan',
+  date: '2022-09-02',
+  title: 'Introducing Animaginary: High performance web animations',
+  description:
+    'When you\'re building a website for a company as ambitious as Planetaria, you need to make an impression. I wanted people to visit our website and see animations that looked more realistic than reality itself.',
+}
+
+export const metadata = {
+  title: article.title,
+  description: article.description,
+}
+
+export default (props) => <ArticleLayout article={article} {...props} />
+
+When you\'re building a website for a company as ambitious as Planetaria, you need to make an impression. I wanted people to visit our website and see animations that looked more realistic than reality itself.
+
+That\'s why I spent three months working on our new animation library, Animaginary. It\'s the first and only library that can animate any CSS property you can imagine, even the ones that don\'t exist yet.
+
+## Implementation
+
+The way Animaginary works under the hood is quite complex, but I'll try to explain it in simple terms.
+
+When you trigger an animation with Animaginary, it doesn\'t just change the CSS property from one value to another. Instead, it calculates every single frame of the animation in advance using Web Assembly, then stores all of those frames in memory.
+
+```js
+import { animate } from '@planetaria/animaginary'
+
+animate({
+  from: { opacity: 0, rotate: '0deg' },
+  to: { opacity: 1, rotate: '360deg' },
+})
+```
+
+This approach has several advantages:
+
+1. **No frame drops** — because we pre-calculate every frame, there\'s never any jank
+2. **Realistic physics** — we can simulate complex physics interactions
+3. **Better performance** — Web Assembly is much faster than JavaScript
+
+## Results
+
+The results speak for themselves. Our website now loads 10x faster than our competitors, and our animations look so realistic that people often mistake them for videos.
+
+We\'ve open-sourced Animaginary so that other companies can benefit from this technology. You can find it on GitHub.
