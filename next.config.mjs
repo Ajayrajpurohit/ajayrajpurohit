@@ -4,9 +4,8 @@ import remarkGfm from 'remark-gfm'
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'export',
-  distDir: 'dist',
   pageExtensions: ['js', 'jsx', 'ts', 'tsx', 'mdx'],
+  trailingSlash: true,
   experimental: {
     outputFileTracingIncludes: {
       '/articles/*': ['./src/app/articles/**/*.mdx'],
