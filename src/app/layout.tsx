@@ -8,9 +8,11 @@ import '@/styles/tailwind.css'
 export const metadata: Metadata = {
   title: {
     template: '%s - Ajay Rajpurohit',
-    default: 'Ajay Rajpurohit - Software Developer',
+    default:
+      'Ajay Rajpurohit - Chief Product Officer | Engineering Leader',
   },
-  description: 'I am a software developer passionate about creating innovative solutions. Welcome to my portfolio where I share my work, thoughts, and experiences.',
+  description:
+    'I lead engineering at Gemba, scaling code and culture. From cloud-native infra to internal low-code platforms, I design tools that serve real humans.',
   alternates: {
     types: {
       'application/rss+xml': `${process.env.NEXT_PUBLIC_SITE_URL}/feed.xml`,
