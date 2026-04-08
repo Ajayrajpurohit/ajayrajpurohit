@@ -5,11 +5,10 @@ import clsx from 'clsx'
 import { Container } from '@/components/Container'
 import {
   GitHubIcon,
-  InstagramIcon,
   LinkedInIcon,
-  XIcon,
 } from '@/components/SocialIcons'
 import portraitImage from '@/images/portrait.jpg'
+import { AboutContent } from '@/components/AboutContent'
 
 function SocialLink({
   className,
@@ -61,57 +60,29 @@ export default function About() {
           </div>
         </div>
         <div className="lg:order-first lg:row-span-2">
-          <h1 className="text-4xl font-bold tracking-tight text-zinc-800 sm:text-5xl dark:text-zinc-100">
-            I&apos;m Ajay Rajpurohit. I live in India, where I build the future of software development.
-          </h1>
-          <div className="mt-6 space-y-7 text-base text-zinc-600 dark:text-zinc-400">
-            <p>
-              From a young age, I&apos;ve been fascinated by systems and how they connect to create something 
-              greater than the sum of their parts. This perspective has guided my journey through software 
-              engineering, product development, and now AI-powered platforms.
-            </p>
-            <p>
-              As Head of Product at Gemba, I lead strategic initiatives that transform how teams build 
-              and ship software. With over 5 years of experience, I&apos;ve learned that the best products 
-              are born from understanding both the technical possibilities and human needs.
-            </p>
-            <p>
-              My current passion projects reflect my vision for the future: Indona, an AI-powered SDLC 
-              platform that transforms moodboards and UI concepts into fully deployable applications, 
-              and NEURA OS, a personal operating system designed for human-AI symbiosis. These aren&apos;t 
-              just tools—they&apos;re explorations into how technology can amplify human potential.
-            </p>
-            <p>
-              I believe we&apos;re at a pivotal moment where AI isn&apos;t replacing human creativity but 
-              enhancing it. My work focuses on building platforms that understand context, anticipate 
-              needs, and turn complex technical processes into intuitive experiences.
-            </p>
-            <p>
-              When I&apos;m not building systems that build systems, I&apos;m thinking about cognition, 
-              self-evolution, and the beautiful complexity of emergence in both technology and life.
-            </p>
-          </div>
+          <AboutContent />
         </div>
         <div className="lg:pl-20">
           <ul role="list">
-            <SocialLink href="#" icon={XIcon}>
-              Follow on X
-            </SocialLink>
-            <SocialLink href="#" icon={InstagramIcon} className="mt-4">
-              Follow on Instagram
-            </SocialLink>
-            <SocialLink href="https://github.com/ajayrajpurohit" icon={GitHubIcon} className="mt-4">
+            <SocialLink
+              href="https://github.com/ajayrajpurohit"
+              icon={GitHubIcon}
+            >
               Follow on GitHub
             </SocialLink>
-            <SocialLink href="https://linkedin.com/in/ajayrajpurohit" icon={LinkedInIcon} className="mt-4">
+            <SocialLink
+              href="https://linkedin.com/in/ajayrajpurohit"
+              icon={LinkedInIcon}
+              className="mt-4"
+            >
               Connect on LinkedIn
             </SocialLink>
             <SocialLink
-              href="mailto:ajay@rajpurohit.com"
+              href="mailto:ajayrajpurohit1@hotmail.com"
               icon={MailIcon}
               className="mt-8 border-t border-zinc-100 pt-8 dark:border-zinc-700/40"
             >
-              ajay@rajpurohit.com
+              ajayrajpurohit1@hotmail.com
             </SocialLink>
           </ul>
         </div>
